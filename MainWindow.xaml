@@ -8,84 +8,18 @@
         mc:Ignorable="d"
         Height="600" Width="920"
         Background="Transparent"
-        AllowsTransparency="False">
+        WindowStyle="None"
+        AllowsTransparency="True">
     <Window.DataContext>
         <viewModel:MainViewModel>
 
         </viewModel:MainViewModel>
     </Window.DataContext>
-    <Border Background="#272537">
+    <Border Background="#272537"
+            CornerRadius="20">
         <Grid>
-            <Grid.ColumnDefinitions
-                >
-                <ColumnDefinition Width="200">
-
-                </ColumnDefinition>
-                <ColumnDefinition Width="720"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75">
-
-                </RowDefinition>
-                <RowDefinition Height="525"/>
-            </Grid.RowDefinitions>
-
-
-            <TextBlock Text="HMI Controls"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       Margin="20,0,0,0"
-                       Foreground="White"
-                       FontSize="22"/>
-            <StackPanel Grid.Row="1">
-                <RadioButton Content="Trang chủ"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             IsChecked="{Binding HomeCheck}"
-                             Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Tivi"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             
-                             Command="{Binding TiviCommand}"/>
-                <RadioButton Content="Đèn"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding LightCommand}"/>
-                <RadioButton Content="Quạt"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding FanCommand}"/>
-                <RadioButton Content="Điều hòa"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding AirCommand}"/>
-                <RadioButton Content="Tùy chỉnh"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding TuychinhCommand}"/>
-           
-            </StackPanel>
-
-            <TextBlock Height="40"
-                       Width="250"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       Margin="5"
-                       Grid.Column="2"/>
-
-            <ContentControl Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="10"
+            <ContentControl Margin="140, 60, 10, 10"
                             Content="{Binding CurrentView}"/>
         </Grid>
-
     </Border>
 </Window>
