@@ -39,39 +39,47 @@
                        Foreground="White"
                        FontSize="22"/>
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Trang chủ"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             IsChecked="{Binding HomeCheck}"
-                             Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Tivi"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             
-                             Command="{Binding TiviCommand}"/>
-                <RadioButton Content="Đèn"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding LightCommand}"/>
-                <RadioButton Content="Quạt"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding FanCommand}"/>
-                <RadioButton Content="Điều hòa"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding AirCommand}"/>
-                <RadioButton Content="Tùy chỉnh"
-                             Foreground="White"
-                             FontSize="14"
-                             Height="50"
-                             Command="{Binding TuychinhCommand}"/>
-           
+                <Border Width="127" Height="127" CornerRadius="10" Margin="30,120,30,0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#FF00FFDC" Offset="0.0"/>
+                            <GradientStop Color="#FF00FFDC" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <Button Command="{Binding HomeViewCommand}"
+                            Background="Transparent"
+                            BorderThickness="0" Margin="0,0,0,0">
+                            <Image Width="140"
+                                Height="140"
+                                Source="/Images/home.png"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                            />
+                        </Button>
+                    </Grid>
+                </Border>
+                <Border Width="127" Height="127" CornerRadius="10" Margin="30,30,30,0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#FFFF8080" Offset="0.0"/>
+                            <GradientStop Color="#FFFF8080" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <Button Click="Close_Button_Click"
+                            Background="Transparent"
+                            BorderThickness="0" Margin="0,0,0,0">
+                            <Image Width="140"
+                                Height="140"
+                                Source="/Images/close.png"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                            />
+                        </Button>
+                    </Grid>
+                </Border>
+
             </StackPanel>
 
             <TextBlock Height="40"

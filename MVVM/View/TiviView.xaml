@@ -105,7 +105,7 @@
                         >
                     <Image Width="100"
                            Height="100"
-                           Source="/Images/shut.png"
+                           Source="/Images/FanAsset/shut.png"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            />
