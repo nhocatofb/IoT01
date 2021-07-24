@@ -164,21 +164,6 @@
     <Resource Include="Images\anh2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\tivi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\light.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\fan2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\air.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\st.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\st2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -194,7 +179,43 @@
     <Resource Include="Images\vdown.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\shut.png" />
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LightAsset\light-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LightAsset\light-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FanAsset\shut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeAsset\air.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeAsset\fan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeAsset\light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeAsset\tivi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeAsset\st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TVAsset\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TVAsset\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TVAsset\shut.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
