@@ -25,14 +25,9 @@
                         CornerRadius="10"
                         Margin="50,0,0,0"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="UpButton" Background="Transparent"
                             BorderThickness="0">
-                        <Image Width="140"
-                           Height="140"
-                           Source="/Images/up.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Border>
                 <Border Width="150"
@@ -75,14 +70,9 @@
                         CornerRadius="10"
                         Margin="50,0,0,0"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="DownButton" Background="Transparent"
                             BorderThickness="0">
-                        <Image Width="140"
-                           Height="140"
-                           Source="/Images/down.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Border>
                 <Border Width="150"
@@ -103,12 +93,10 @@
                         Background="#FFFFD04E"
                         CornerRadius="10"
                         >
-                    <Image Width="100"
-                           Height="100"
-                           Source="/Images/shut.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                    <Button x:Name="TurnOffButton" Background="Transparent"
+                            BorderThickness="0">
+                        <Image/>
+                    </Button>
                 </Border>
             </StackPanel>
         </StackPanel>

@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="50, 0, 0, 0"/>
+                    <Setter Property="Margin" Value="0, 0, 0, 0"/>
                 </Style>
             </StackPanel.Resources>
             <TextBlock Text="Điều khiển Đèn"
@@ -18,34 +18,16 @@
                        Foreground="White"
                        HorizontalAlignment="Left"
                        Margin="50,10,0,100"/>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Border Width="150"
                         Height="150"
-                        Background="#FFFF9A4E"
+                        Background="#FF4EC7FF"
                         CornerRadius="10"
-                        Margin="110,0,0,0"
                         >
-                    <Button Background="Transparent"
-                            BorderThickness="0">
-                        <Image Width="140"
-                           Height="140"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                    <Button x:Name="LightButton" Background="Transparent"
+                            BorderThickness="0" Click="LightButton_Click">
+                        <Image/>
                     </Button>
-                </Border>
-                <Border Width="150"
-                        Height="150"
-                        Background="#4e99ff"
-                        CornerRadius="10"
-                        Margin="130,0,0,0"
-                        >
-                    <Image Width="150"
-                           Height="150"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
-
                 </Border>
             </StackPanel>
         </StackPanel>

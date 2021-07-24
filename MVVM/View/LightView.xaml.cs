@@ -20,9 +20,44 @@ namespace WpfApp2.MVVM.View
     /// </summary>
     public partial class LightView : UserControl
     {
+        bool isOn = false;
+        string iconOnPath = "/Images/LightAsset/light-on.png";
+        string iconOffPath = "/Images/LightAsset/light-off.png";
+        string nextStatePath = null;
+
         public LightView()
         {
             InitializeComponent();
+            LightButton.Content = new Image
+            {
+                Width = 140,
+                Height = 140,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Source = new BitmapImage(new Uri(iconOffPath, UriKind.Relative))
+            };
+        }
+
+        private void LightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isOn)
+            {
+                nextStatePath = iconOffPath;
+            } 
+            else
+            {
+                nextStatePath = iconOnPath;
+            }
+            isOn = !isOn;
+
+            LightButton.Content = new Image
+            {
+                Width = 140,
+                Height = 140,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Source = new BitmapImage(new Uri(nextStatePath, UriKind.Relative))
+            };
         }
     }
 }

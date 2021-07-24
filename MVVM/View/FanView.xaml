@@ -7,16 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1280">
     <Grid>
-            <StackPanel>
-        
-        <TextBlock Text="Điều khiển quạt"
+        <StackPanel>
+
+            <TextBlock Text="Điều khiển quạt"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    />
             <StackPanel Orientation="Horizontal">
-                <Border Width="280"
+                <Border x:Name="SwingButton" Width="280"
                     Height="280"
                     >
                     <Border.Background>
@@ -39,24 +39,28 @@
                                 <Setter Property="Margin" Value="50, 0, 0, 0"/>
                             </Style>
                         </StackPanel.Resources>
-                        
+
                         <StackPanel Orientation="Horizontal">
                             <Border Width="120"
-                        Height="120"
-                        Background="#844eff"
-                        CornerRadius="10"
-                        Margin="50,0,0,0"
-                        >
-                                <Button Background="Transparent"
-                            BorderThickness="0">
+                                Height="120"
+                                Background="#844eff"
+                                CornerRadius="10"
+                                Margin="50,0,0,0"
+                            >
+                                <Button x:Name="FirstLevelButton" Background="Transparent"
+                                    BorderThickness="0">
+                                    <Image/>
                                 </Button>
                             </Border>
                             <Border Width="120"
-                        Height="120"
-                        Background="#4eff91"
-                        CornerRadius="10"
-                        >
-                               
+                                Height="120"
+                                Background="#4eff91"
+                                CornerRadius="10"
+                            >
+                                <Button x:Name="SecondLevelButton" Background="Transparent"
+                                    BorderThickness="0">
+                                    <Image/>
+                                </Button>
                             </Border>
                         </StackPanel>
                     </StackPanel>
@@ -73,27 +77,25 @@
                        Margin="50,10,0,10"/>
                         <StackPanel Orientation="Horizontal">
                             <Border Width="120"
-                        Height="120"
-                        Background="#FFFF794E"
-                        CornerRadius="10"
-                        Margin="50,0,0,0"
-                        >
-                                <Button Background="Transparent"
-                            BorderThickness="0">
-                                   
+                                Height="120"
+                                Background="#FFFF794E"
+                                CornerRadius="10"
+                                Margin="50,0,0,0"
+                            >
+                                <Button x:Name="ThirdLevelButton" Background="Transparent"
+                                    BorderThickness="0">
+                                    <Image/>
                                 </Button>
                             </Border>
                             <Border Width="120"
-                        Height="120"
-                        Background="#FFFFD04E"
-                        CornerRadius="10"
-                        >
-                                <Image Width="100"
-                           Height="100"
-                           Source="/Images/shut.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                                Height="120"
+                                Background="#FFFFD04E"
+                                CornerRadius="10"
+                            >
+                                <Button x:Name="TurnOffButton" Background="Transparent"
+                                    BorderThickness="0">
+                                    <Image/>
+                                </Button>
                             </Border>
                         </StackPanel>
                     </StackPanel>

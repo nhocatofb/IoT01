@@ -20,9 +20,19 @@ namespace WpfApp2.MVVM.View
     /// </summary>
     public partial class FanView : UserControl
     {
+        readonly string TurnOffButtonIconPath = "/Images/FanAssest/shut.png";
         public FanView()
         {
             InitializeComponent();
+            TurnOffButton.Content = new Image
+            {
+                Width = 120,
+                Height = 120,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Source = new BitmapImage(new Uri(TurnOffButtonIconPath, UriKind.Relative))
+            };
         }
+
     }
 }
