@@ -21,9 +21,9 @@
                     Height="200"
                     >
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5BC3FF" Offset="1"/>
+                        <GradientStop Color="#FF3AA0FF"/>
                     </LinearGradientBrush>
                 </Border.Background>
 
@@ -60,15 +60,15 @@
 
             <Border Width="200" Height="200" CornerRadius="10" Margin="45,0,0,0">
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#ffc554" Offset="0.0"/>
-                        <GradientStop Color="#ffb73a" Offset="1"/>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFFE5B3" Offset="1"/>
+                        <GradientStop Color="#FFFFB73A" Offset="0.257"/>
                     </LinearGradientBrush>
                 </Border.Background>
                 <Grid>
                     <Button x:Name="SettingButton" Command="{Binding TuychinhCommand}"
                             Background="Transparent"
-                            BorderThickness="0">
+                            BorderThickness="0" Click="SettingButton_Click">
                         <Image/>
                     </Button>
                 </Grid>
@@ -91,10 +91,15 @@
             <StackPanel Orientation="Horizontal">
                 <Border Width="150"
                         Height="150"
-                        Background="#844eff"
                         CornerRadius="10"
                         Margin="0"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF986BFF" Offset="0.653"/>
+                            <GradientStop Color="#FF5D38B4"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="TVButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding TiviCommand}">
@@ -103,9 +108,14 @@
                 </Border>
                 <Border Width="150"
                         Height="150"
-                        Background="#4e99ff"
                         CornerRadius="10"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF82B7FF" Offset="0.916"/>
+                            <GradientStop Color="#FF4E88FF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="LightButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding LightCommand}">
@@ -115,9 +125,14 @@
                 </Border>
                 <Border Width="150"
                         Height="150"
-                        Background="#4eff91"
                         CornerRadius="10"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF92FFBB" Offset="1"/>
+                            <GradientStop Color="#FF19D962"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="ACButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding AirCommand}">
@@ -126,9 +141,14 @@
                 </Border>
                 <Border Width="150"
                         Height="150"
-                        Background="#ecff4e"
                         CornerRadius="10"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF1FF7D" Offset="0.728"/>
+                            <GradientStop Color="#FFBECF2E"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="FanButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding FanCommand}">

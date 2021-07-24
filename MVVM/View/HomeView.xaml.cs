@@ -46,24 +46,24 @@ namespace WpfApp2.MVVM.View
             };
             LightButton.Content = new Image
             {
-                Width = 140,
-                Height = 140,
+                Width = 100,
+                Height = 100,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Source = new BitmapImage(new Uri(LightButtonIconPath, UriKind.Relative))
             };
             ACButton.Content = new Image
             {
-                Width = 140,
-                Height = 140,
+                Width = 100,
+                Height = 100,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Source = new BitmapImage(new Uri(ACButtonIconPath, UriKind.Relative))
             };
             FanButton.Content = new Image
             {
-                Width = 140,
-                Height = 140,
+                Width = 100,
+                Height = 100,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Source = new BitmapImage(new Uri(FanButtonIconPath, UriKind.Relative))
@@ -71,6 +71,11 @@ namespace WpfApp2.MVVM.View
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SettingButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

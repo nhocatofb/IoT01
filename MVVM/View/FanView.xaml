@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1280">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="0, 30, 0, 0">
 
             <TextBlock Text="Điều khiển quạt"
                    Foreground="White"
