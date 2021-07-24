@@ -66,15 +66,10 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <Grid>
-                    <Button Command="{Binding TuychinhCommand}"
+                    <Button x:Name="SettingButton" Command="{Binding TuychinhCommand}"
                             Background="Transparent"
                             BorderThickness="0">
-                        <Image Width="140"
-                           Height="140"
-                           Source="/Images/st.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Grid>
                 
@@ -100,15 +95,10 @@
                         CornerRadius="10"
                         Margin="0"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="TVButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding TiviCommand}">
-                        <Image Width="140"
-                           Height="140"
-                           Source="/Images/tivi.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Border>
                 <Border Width="150"
@@ -116,15 +106,10 @@
                         Background="#4e99ff"
                         CornerRadius="10"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="LightButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding LightCommand}">
-                        <Image Width="100"
-                           Height="100"
-                           Source="/Images/light.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
 
                 </Border>
@@ -133,15 +118,10 @@
                         Background="#4eff91"
                         CornerRadius="10"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="ACButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding AirCommand}">
-                        <Image Width="100"
-                           Height="100"
-                           Source="/Images/air.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Border>
                 <Border Width="150"
@@ -149,15 +129,10 @@
                         Background="#ecff4e"
                         CornerRadius="10"
                         >
-                    <Button Background="Transparent"
+                    <Button x:Name="FanButton" Background="Transparent"
                             BorderThickness="0" Click="Button_Click"
                             Command="{Binding FanCommand}">
-                        <Image Width="100"
-                           Height="100"
-                           Source="/Images/fan2.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                        <Image/>
                     </Button>
                 </Border>
 

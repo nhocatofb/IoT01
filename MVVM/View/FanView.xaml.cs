@@ -26,8 +26,8 @@ namespace WpfApp2.MVVM.View
             InitializeComponent();
             TurnOffButton.Content = new Image
             {
-                Width = 140,
-                Height = 140,
+                Width = 120,
+                Height = 120,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Source = new BitmapImage(new Uri(TurnOffButtonIconPath, UriKind.Relative))
