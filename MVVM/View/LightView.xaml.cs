@@ -40,13 +40,16 @@ namespace WpfApp2.MVVM.View
 
         private void LightButton_Click(object sender, RoutedEventArgs e)
         {
+            var message = "";
             if (isOn)
             {
                 nextStatePath = iconOffPath;
+                message = "{\"id\": \"1\", \"command\":\"off\"}";
             } 
             else
             {
                 nextStatePath = iconOnPath;
+                message = "{\"id\": \"1\", \"command\":\"on\"}";
             }
             isOn = !isOn;
 
@@ -58,6 +61,10 @@ namespace WpfApp2.MVVM.View
                 VerticalAlignment = VerticalAlignment.Center,
                 Source = new BitmapImage(new Uri(nextStatePath, UriKind.Relative))
             };
+
+            
+            API.ApiHelper.RequestMessage(message);
+            API.ApiHelper.PublicMessage();
         }
     }
 }
