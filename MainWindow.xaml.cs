@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WpfApp2
 {
     /// <summary>
@@ -23,6 +24,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
+            API.ApiHelper.InitializeClient();
         }
 
         private void Close_Button_Click(object sender, RoutedEventArgs e)
