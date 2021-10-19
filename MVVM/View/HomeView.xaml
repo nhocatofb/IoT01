@@ -7,9 +7,8 @@
              xmlns:viewModel="clr-namespace:WpfApp2.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
+
     <StackPanel>
-        
         <TextBlock Text="Xin chào"
                    Foreground="White"
                    FontSize="28"
@@ -17,8 +16,8 @@
                    Margin="0,0,0,20"
                    />
         <StackPanel Orientation="Horizontal">
-            <Border Width="400"
-                    Height="200"
+            <Border Width="{Binding BanerWidth}" 
+                    Height="{Binding BanerHeight}"
                     >
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -28,9 +27,9 @@
                 </Border.Background>
 
                 <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
+                    <RectangleGeometry RadiusX="20"
+                                       RadiusY="20"
+                                       Rect="{Binding RectSize}"/>
                 </Border.Clip>
 
                 <Grid>
@@ -58,7 +57,7 @@
 
             </Border>
 
-            <Border Width="200" Height="200" CornerRadius="10" Margin="45,0,0,0">
+            <Border Width="{Binding TuychinhButtonSize}" Height="{Binding TuychinhButtonSize}" CornerRadius="{Binding Radius}" Margin="45,0,0,0">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#FFFFE5B3" Offset="1"/>
@@ -89,9 +88,9 @@
                        HorizontalAlignment="Left"
                        Margin="10,10,0,10"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="150"
-                        Height="150"
-                        CornerRadius="10"
+                <Border Width="{Binding DeviceButtonSize}"
+                        Height="{Binding DeviceButtonSize}"
+                        CornerRadius="{Binding Radius}"
                         Margin="0"
                         >
                     <Border.Background>
@@ -106,9 +105,9 @@
                         <Image/>
                     </Button>
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        CornerRadius="10"
+                <Border Width="{Binding DeviceButtonSize}"
+                        Height="{Binding DeviceButtonSize}"
+                        CornerRadius="{Binding Radius}"
                         >
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -123,9 +122,9 @@
                     </Button>
 
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        CornerRadius="10"
+                <Border Width="{Binding DeviceButtonSize}"
+                        Height="{Binding DeviceButtonSize}"
+                        CornerRadius="{Binding Radius}"
                         >
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -139,9 +138,9 @@
                         <Image/>
                     </Button>
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        CornerRadius="10"
+                <Border Width="{Binding DeviceButtonSize}"
+                        Height="{Binding DeviceButtonSize}"
+                        CornerRadius="{Binding Radius}"
                         >
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">

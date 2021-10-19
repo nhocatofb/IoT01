@@ -14,16 +14,23 @@
                 </Style>
             </StackPanel.Resources>
             <TextBlock Text="Điều khiển Đèn"
-                       FontSize="20"
+                       FontSize="27"
                        Foreground="White"
                        HorizontalAlignment="Left"
                        Margin="50,10,0,100"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" 
+                        Margin="250,10,0,100">
                 <Border Width="150"
                         Height="150"
-                        Background="#FF4EC7FF"
                         CornerRadius="10"
+                        
                         >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#FF3A9FFF" Offset="0.0"/>
+                            <GradientStop Color="#FF8EFFB3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="LightButton" Background="Transparent"
                             BorderThickness="0" Click="LightButton_Click">
                         <Image/>

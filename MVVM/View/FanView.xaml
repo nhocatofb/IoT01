@@ -13,10 +13,10 @@
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
+                   Margin="0,0,0,40"
                    />
             <StackPanel Orientation="Horizontal">
-                <Border x:Name="SwingButton" Width="280"
+                <Border  Width="280"
                     Height="280"
                     >
                     <Border.Background>
@@ -31,6 +31,10 @@
                                        RadiusY="10"
                                        Rect="0,0,280,280"/>
                     </Border.Clip>
+                    <Button x:Name="SwingButton" Background="Transparent"
+                                    BorderThickness="0">
+                        <Image/>
+                    </Button>
                 </Border>
                 <StackPanel>
                     <StackPanel>
@@ -43,10 +47,16 @@
                         <StackPanel Orientation="Horizontal">
                             <Border Width="120"
                                 Height="120"
-                                Background="#844eff"
                                 CornerRadius="10"
                                 Margin="50,0,0,0"
-                            >
+                                >
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                        <GradientStop Color="#FF3A9FFF" Offset="0.0"/>
+                                        <GradientStop Color="#FF8EFFB3" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                
                                 <Button x:Name="FirstLevelButton" Background="Transparent"
                                     BorderThickness="0">
                                     <Image/>
@@ -54,9 +64,16 @@
                             </Border>
                             <Border Width="120"
                                 Height="120"
-                                Background="#4eff91"
+                             
                                 CornerRadius="10"
                             >
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF986BFF" Offset="0.653"/>
+                                        <GradientStop Color="#FF5D38B4"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                
                                 <Button x:Name="SecondLevelButton" Background="Transparent"
                                     BorderThickness="0">
                                     <Image/>
@@ -78,10 +95,16 @@
                         <StackPanel Orientation="Horizontal">
                             <Border Width="120"
                                 Height="120"
-                                Background="#FFFF794E"
+                            
                                 CornerRadius="10"
                                 Margin="50,0,0,0"
                             >
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF92FFBB" Offset="1"/>
+                                        <GradientStop Color="#FF19D962"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
                                 <Button x:Name="ThirdLevelButton" Background="Transparent"
                                     BorderThickness="0">
                                     <Image/>
@@ -89,9 +112,15 @@
                             </Border>
                             <Border Width="120"
                                 Height="120"
-                                Background="#FFFFD04E"
+                              
                                 CornerRadius="10"
                             >
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFF1FF7D" Offset="0.728"/>
+                                        <GradientStop Color="#FFBECF2E"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
                                 <Button x:Name="TurnOffButton" Background="Transparent"
                                     BorderThickness="0">
                                     <Image/>

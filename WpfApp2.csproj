@@ -217,5 +217,19 @@
   <ItemGroup>
     <Resource Include="Images\TVAsset\shut.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TVAsset\left.png" />
+    <Resource Include="Images\TVAsset\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FanAsset\0.png" />
+    <Resource Include="Images\FanAsset\1.png" />
+    <Resource Include="Images\FanAsset\2.png" />
+    <Resource Include="Images\FanAsset\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FanAsset\rotate.png" />
+    <Resource Include="Images\FanAsset\turbine.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

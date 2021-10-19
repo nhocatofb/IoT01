@@ -24,7 +24,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
-            API.ApiHelper.InitializeClient();
+            //API.ApiHelper.InitializeClient();
         }
 
         private void Close_Button_Click(object sender, RoutedEventArgs e)

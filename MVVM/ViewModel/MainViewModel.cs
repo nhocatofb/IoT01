@@ -9,7 +9,6 @@ namespace WpfApp2.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
-        public String HomeCheck = "true";
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand TuychinhCommand { get; set; }
@@ -27,6 +26,50 @@ namespace WpfApp2.MVVM.ViewModel
 
         private object _currentView;
 
+        private object _radius;
+
+        private object homeButtonSize = 110.0;
+        private object exitButtonSize = 100.0;
+
+        public object Radius
+        {
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                _radius = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public object HomeButtonSize
+        {
+            get
+            {
+                return homeButtonSize;
+            }
+            set
+            {
+                homeButtonSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public object ExitButtonSize
+        {
+            get
+            {
+                return exitButtonSize;
+            }
+            set
+            {
+                exitButtonSize = value;
+                OnPropertyChanged();
+            }
+        }
+
         public object CurrentView
         {
             get { 
@@ -38,11 +81,27 @@ namespace WpfApp2.MVVM.ViewModel
             }
         }
 
+        public void MediumSizeButton()
+        {
+            HomeButtonSize = 110.0;
+            ExitButtonSize = 100.0;
+        }
+
+        public void SmallSizeButton()
+        {
+            HomeButtonSize = 105.0;
+            ExitButtonSize = 90.0;
+        }
+
         public MainViewModel()
         {
+            MediumSizeButton();
+
+            Radius = 500;
+
             HomeVM = new HomeViewModel(this);
-            TuychinhVM = new Tuychinh();
-            TiviVM = new Tivi();
+            TuychinhVM = new Tuychinh(this);
+            TiviVM = new Tivi(this);
             LightVM = new Light();
             FanVM = new Fan();
             AirVM = new Condition();

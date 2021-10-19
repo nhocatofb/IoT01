@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WpfApp2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Margin="0, 30, 0, 0">
+    <StackPanel Margin="10, 20, 0, 0">
         <StackPanel>
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -14,41 +14,60 @@
                 </Style>
             </StackPanel.Resources>
             <TextBlock Text="Điều khiển TV"
-                       FontSize="20"
+                       FontSize="27"
                        Foreground="White"
                        HorizontalAlignment="Left"
-                       Margin="50,10,0,10"/>
+                       Margin="50,0,0,40"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="150"
-                        Height="150"
-                        Background="#844eff"
-                        CornerRadius="10"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
+                        CornerRadius="{Binding Radius}"
                         Margin="50,0,0,0"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF5BC3FF" Offset="1"/>
+                            <GradientStop Color="#FF3AA0FF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Button x:Name="UpButton" Background="Transparent"
                             BorderThickness="0">
                         <Image/>
                     </Button>
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        Background="#4e99ff"
-                        CornerRadius="10"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
+                       
+                        CornerRadius="{Binding Radius}"
                         >
-                    <Image Width="150"
-                           Height="150"
-                           Source="/Images/vup.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           />
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF5BC3FF" Offset="1"/>
+                            <GradientStop Color="#FF3AA0FF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button x:Name="MiddleUp" Background="Transparent"
+                            BorderThickness="0">
+                        <Image/>
+                    </Button>
 
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        Background="#4eff91"
-                        CornerRadius="10"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
+               
+                        CornerRadius="{Binding Radius}"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF986BFF" Offset="0.653"/>
+                            <GradientStop Color="#FF5D38B4"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     
+                    <Button x:Name="TopRigt" Background="Transparent"
+                            BorderThickness="0">
+                        <Image/>
+                    </Button>
                 </Border>
             </StackPanel>
         </StackPanel>
@@ -64,34 +83,44 @@
                        HorizontalAlignment="Left"
                        Margin="50,10,0,10"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="150"
-                        Height="150"
-                        Background="#FFFF794E"
-                        CornerRadius="10"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
+         
+                        CornerRadius="{Binding Radius}"
                         Margin="50,0,0,0"
                         >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF92FFBB" Offset="1"/>
+                            <GradientStop Color="#FF19D962"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    
                     <Button x:Name="DownButton" Background="Transparent"
                             BorderThickness="0">
                         <Image/>
                     </Button>
                 </Border>
-                <Border Width="150"
-                        Height="150"
-                        Background="#FF4EA8FF"
-                        CornerRadius="10"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
+    
+                        CornerRadius="{Binding Radius}"
                         >
-                    <Image Width="140"
-                           Height="140"
-                           Source="/Images/vup.png"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center" Margin="25,25,10,10"
-                           />
-
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF92FFBB" Offset="1"/>
+                            <GradientStop Color="#FF19D962"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button x:Name="MiddleDown" Background="Transparent"
+                            BorderThickness="0">
+                        <Image/>
+                    </Button>
                 </Border>
-                <Border Width="150"
-                        Height="150"
+                <Border Width="{Binding ButtonSize}"
+                        Height="{Binding ButtonSize}"
                         Background="#FFFFD04E"
-                        CornerRadius="10"
+                        CornerRadius="{Binding Radius}"
                         >
                     <Button x:Name="TurnOffButton" Background="Transparent"
                             BorderThickness="0">

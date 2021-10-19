@@ -16,8 +16,14 @@
 
         </viewModel:MainViewModel>
     </Window.DataContext>
-    <Border Background="#272537"
+    <Border 
             CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                <GradientStop Color="#272537"  Offset="0.0"/>
+                <GradientStop  Color="Black" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid>
             <Grid.ColumnDefinitions
                 >
@@ -35,7 +41,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="1">
-                <Border Width="110" Height="110" CornerRadius="10" Margin="30,120,30,0">
+                <Border Width="{Binding HomeButtonSize}" Height="{Binding HomeButtonSize}" CornerRadius="{Binding Radius}" Margin="30,120,30,0">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                             <GradientStop Color="#FF3A9FFF" Offset="0.0"/>
@@ -55,7 +61,7 @@
                         </Button>
                     </Grid>
                 </Border>
-                <Border Width="90" Height="90" CornerRadius="10" Margin="30,30,30,0">
+                <Border Width="{Binding ExitButtonSize}" Height="{Binding ExitButtonSize}" CornerRadius="{Binding Radius}" Margin="30,30,30,0">
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="#FFFFE5B3" Offset="1"/>

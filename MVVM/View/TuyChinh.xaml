@@ -6,8 +6,98 @@
              xmlns:local="clr-namespace:WpfApp2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="#1B1B1B">
-    <Grid>
-            
-    </Grid>
+     >
+    <StackPanel Margin="0,0,0,-34">
+        <TextBlock Text="Thay đổi hình dạng"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,10,0,20"
+                   />
+        <StackPanel Orientation="Horizontal">
+            <Border Width="{Binding ShapeButtonSize}" Height="{Binding ShapeButtonSize}" CornerRadius="{Binding Radius}" Margin="60,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF986BFF" Offset="0.653"/>
+                        <GradientStop Color="#FF5D38B4"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Button x:Name="SettingButton" Command="{Binding ShapeCommand}"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Image/>
+                    </Button>
+                </Grid>
+
+            </Border>
+        </StackPanel>
+
+        <StackPanel>
+
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="80, 0, 0, 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Thay đổi kích thước"
+                       FontSize="20"
+                       Foreground="White"
+                       HorizontalAlignment="Left"
+                       Margin="10,30,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                
+                <Border Width="150"
+                        Height="150"
+                        CornerRadius="{Binding Radius}"
+                        x:Name="Big">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF82B7FF" Offset="0.916"/>
+                            <GradientStop Color="#FF4E88FF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button x:Name="LightButton" Background="Transparent"
+                            BorderThickness="0"
+                            Command="{Binding BigSizeCommand}">
+                        <Image/>
+                    </Button>
+
+                </Border>
+                <Border Width="130"
+                        Height="130"
+                        CornerRadius="{Binding Radius}"
+                        x:Name="Medium">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF92FFBB" Offset="1"/>
+                            <GradientStop Color="#FF19D962"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button x:Name="ACButton" Background="Transparent"
+                            BorderThickness="0"
+                            Command="{Binding MediumSizeCommand}">
+                        <Image/>
+                    </Button>
+                </Border>
+                <Border Width="110"
+                        Height="110"
+                        CornerRadius="{Binding Radius}"
+                        >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF1FF7D" Offset="0.728"/>
+                            <GradientStop Color="#FFBECF2E"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button x:Name="FanButton" Background="Transparent"
+                            BorderThickness="0"
+                            Command="{Binding SmallSizeCommand}">
+                        <Image/>
+                    </Button>
+                </Border>
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

@@ -63,8 +63,8 @@ namespace WpfApp2.MVVM.View
             };
 
             
-            API.ApiHelper.RequestMessage(message);
-            API.ApiHelper.PublicMessage();
+            //API.ApiHelper.RequestMessage(message);
+            //API.ApiHelper.PublicMessage();
         }
     }
 }
